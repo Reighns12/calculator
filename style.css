@@ -1,0 +1,164 @@
+/* =============================================
+   style.css — Person 1: UI Styling
+   Group Calculator | Dark Blue + Sky Blue Theme
+   ============================================= */
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2147 50%, #0a1628 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ---- Calculator Shell ---- */
+.calculator {
+  width: 340px;
+  border-radius: 24px;
+  background: linear-gradient(160deg, #0d2147 0%, #0a1a38 100%);
+  box-shadow:
+    0 0 0 1px rgba(87, 183, 255, 0.15),
+    0 8px 40px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(30, 120, 220, 0.12);
+  overflow: hidden;
+  padding: 24px 20px 20px;
+}
+
+/* ---- Display ---- */
+.display {
+  background: rgba(6, 14, 35, 0.7);
+  border-radius: 16px;
+  padding: 20px 18px 14px;
+  margin-bottom: 18px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 1px solid rgba(87, 183, 255, 0.12);
+}
+
+.expression {
+  font-size: 14px;
+  color: rgba(135, 196, 255, 0.55);
+  min-height: 20px;
+  word-break: break-all;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+.result {
+  font-size: 42px;
+  font-weight: 300;
+  color: #e8f4ff;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  word-break: break-all;
+  text-align: right;
+  transition: color 0.15s;
+}
+
+.result.error {
+  font-size: 22px;
+  color: #ff7b7b;
+}
+
+/* ---- Button Grid ---- */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ---- Base Button ---- */
+.btn {
+  border: none;
+  border-radius: 14px;
+  height: 68px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s, background 0.12s;
+  outline: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+/* ---- Number Buttons ---- */
+.btn-number {
+  background: rgba(15, 40, 80, 0.9);
+  color: #cde8ff;
+  border: 1px solid rgba(87, 183, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.btn-number:hover {
+  background: rgba(25, 65, 120, 0.95);
+  border-color: rgba(87, 183, 255, 0.25);
+  box-shadow: 0 0 12px rgba(87, 183, 255, 0.15);
+}
+
+/* ---- Operator Buttons ---- */
+.btn-operator {
+  background: rgba(10, 55, 110, 0.85);
+  color: #57b7ff;
+  border: 1px solid rgba(87, 183, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-size: 22px;
+}
+
+.btn-operator:hover {
+  background: rgba(20, 80, 160, 0.9);
+  color: #8dd1ff;
+  border-color: rgba(87, 183, 255, 0.4);
+  box-shadow: 0 0 16px rgba(87, 183, 255, 0.2);
+}
+
+/* ---- Clear Button ---- */
+.btn-clear {
+  background: linear-gradient(135deg, #0d3a6e, #0a2a55);
+  color: #57b7ff;
+  border: 1px solid rgba(87, 183, 255, 0.3);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-clear:hover {
+  background: linear-gradient(135deg, #1a5299, #1040a0);
+  color: #8dd1ff;
+  box-shadow: 0 0 20px rgba(87, 183, 255, 0.25);
+}
+
+/* ---- Equals Button ---- */
+.btn-equals {
+  background: linear-gradient(135deg, #1a7aff, #0d55cc);
+  color: #ffffff;
+  border: none;
+  font-size: 28px;
+  font-weight: 400;
+  box-shadow: 0 4px 20px rgba(26, 122, 255, 0.4);
+}
+
+.btn-equals:hover {
+  background: linear-gradient(135deg, #3391ff, #1a6be0);
+  box-shadow: 0 4px 28px rgba(26, 122, 255, 0.6);
+}
+
+/* ---- Span helpers ---- */
+.span-two {
+  grid-column: span 2;
+}
