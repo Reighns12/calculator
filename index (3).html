@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="calculator" id="calculator">
+
+    <!-- Display Screen -->
+    <div class="display" id="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+
+    <!-- Button Grid -->
+    <div class="buttons">
+
+      <!-- Row 1 -->
+      <button class="btn btn-clear span-two" id="btn-clear">AC</button>
+      <button class="btn btn-operator" data-op="backspace" id="btn-backspace">⌫</button>
+      <button class="btn btn-operator" data-op="/">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn btn-number" data-num="7">7</button>
+      <button class="btn btn-number" data-num="8">8</button>
+      <button class="btn btn-number" data-num="9">9</button>
+      <button class="btn btn-operator" data-op="*">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn btn-number" data-num="4">4</button>
+      <button class="btn btn-number" data-num="5">5</button>
+      <button class="btn btn-number" data-num="6">6</button>
+      <button class="btn btn-operator" data-op="-">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn btn-number" data-num="1">1</button>
+      <button class="btn btn-number" data-num="2">2</button>
+      <button class="btn btn-number" data-num="3">3</button>
+      <button class="btn btn-operator" data-op="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn btn-number" data-num="0">0</button>
+      <button class="btn btn-number" data-num=".">.</button>
+      <button class="btn btn-equals span-two" id="btn-equals">=</button>
+
+    </div>
+  </div>
+
+  <!-- Load scripts in order -->
+  <script src="operations.js"></script>
+  <script src="events.js"></script>
+
+</body>
+</html>
